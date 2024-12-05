@@ -1,0 +1,86 @@
+{
+  "name": "@sequencemedia/eslint-config-typescript",
+  "version": "0.0.0",
+  "description": "TypeScript configuration for ESLint 9",
+  "keywords": [
+    "JavaScript TypeScript Style",
+    "check",
+    "checker",
+    "code",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "enforce",
+    "eslint",
+    "eslintconfig",
+    "hint",
+    "jscs",
+    "jshint",
+    "lint",
+    "policy",
+    "quality",
+    "simple",
+    "typescript",
+    "typescript style",
+    "style",
+    "style checker",
+    "style linter",
+    "verify"
+  ],
+  "main": "./index.mjs",
+  "type": "module",
+  "author": {
+    "name": "Jonathan Perry for Sequence Media Limited",
+    "email": "sequencemedia@sequencemedia.net",
+    "url": "https://sequencemedia.net"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sequencemedia/eslint-config-typescript.git"
+  },
+  "homepage": "https://github.com/sequencemedia/eslint-config-typescript#readme",
+  "bugs": {
+    "url": "https://github.com/sequencemedia/eslint-config-typescript/issues"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky",
+    "test": "mocha test --recursive --verbose --color"
+  },
+  "dependencies": {
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.14.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "globals": "^15.13.0",
+    "typescript-eslint": "^8.15.0"
+  },
+  "devDependencies": {
+    "@sequencemedia/eslint-config-standard": "^0.1.0",
+    "chai": "^5.1.2",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "mocha": "^11.0.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=9"
+  },
+  "imports": {
+    "#eslint-config-typescript": "./index.mjs",
+    "#eslint-config-typescript/common": "./common/index.mjs",
+    "#eslint-config-typescript/common/merge": "./common/merge.mjs",
+    "#eslint-config-typescript/common/merge/*": "./common/merge/*.mjs",
+    "#eslint-config-typescript/config/*": "./config/*.mjs",
+    "#eslint-config-typescript/merge": "./merge.mjs",
+    "#eslint-config-typescript/merge/*": "./merge/*.mjs"
+  },
+  "exports": {
+    ".": "./index.mjs",
+    "./config/*": "./config/*.mjs",
+    "./merge": "./merge.mjs",
+    "./merge/*": "./merge/*.mjs"
+  }
+}
