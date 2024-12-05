@@ -6,18 +6,22 @@ function getLanguageOptionsParser ({ languageOptions: { parser = null } = {} }) 
   return parser
 }
 
-function filterLanguageOptionsEntriesbyKey ([key]) {
+function removeParserByEntriesKey ([key]) {
   return key !== 'parser'
 }
 
-export function getLanguageOptions ({ languageOptions = {} }) {
+export function getLanguageOptionsWithoutParser ({ languageOptions = {} }) {
   const entries = Object.entries(languageOptions)
 
   return (
     Object.fromEntries(
-      entries.filter(filterLanguageOptionsEntriesbyKey)
+      entries.filter(removeParserByEntriesKey)
     )
   )
+}
+
+export function getLanguageOptions ({ languageOptions = {} }) {
+  return languageOptions
 }
 
 export function getLinterOptions ({ linterOptions = {} }) {
@@ -41,8 +45,7 @@ export function mergeLanguageOptions (alpha = {}, omega = {}) {
     Object
       .assign(
         hasLanguageOptionsParser(alpha) ? { parser: getLanguageOptionsParser(alpha) } : {},
-        structuredClone(getLanguageOptions(alpha)),
-        hasLanguageOptionsParser(omega) ? { parser: getLanguageOptionsParser(omega) } : {},
+        structuredClone(getLanguageOptionsWithoutParser(alpha)),
         getLanguageOptions(omega)
       )
   )
