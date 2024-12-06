@@ -51,6 +51,7 @@
     "test": "mocha test --recursive --verbose --color"
   },
   "dependencies": {
+    "@sequencemedia/eslint-merge": "^0.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.14.0",
@@ -71,14 +72,13 @@
   "imports": {
     "#eslint-config-typescript": "./index.mjs",
     "#eslint-config-typescript/common": "./common/index.mjs",
-    "#eslint-config-typescript/common/merge": "./common/merge.mjs",
-    "#eslint-config-typescript/common/merge/*": "./common/merge/*.mjs",
     "#eslint-config-typescript/config/*": "./config/*.mjs",
     "#eslint-config-typescript/merge": "./merge.mjs",
     "#eslint-config-typescript/merge/*": "./merge/*.mjs"
   },
   "exports": {
     ".": "./index.mjs",
+    "./common": "./common/index.mjs",
     "./config/*": "./config/*.mjs",
     "./merge": "./merge.mjs",
     "./merge/*": "./merge/*.mjs"

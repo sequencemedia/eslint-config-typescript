@@ -6,11 +6,11 @@ import {
   parser
 } from 'typescript-eslint'
 
-import TYPESCRIPT from '#eslint-config-typescript/config/typescript'
+import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/config/typescript'
 
-import merge from '#eslint-config-typescript/merge'
+import merge from '@sequencemedia/eslint-config-typescript/merge'
 
-describe('#eslint-config-typescript/merge', () => {
+describe('@sequencemedia/eslint-config-typescript/merge', () => {
   describe('`merge`', () => it('is a function', () => expect(merge).to.be.a('function')))
 
   describe('`merge()`', () => {
