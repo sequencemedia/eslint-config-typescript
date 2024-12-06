@@ -1,10 +1,10 @@
-import mergeWith from '@sequencemedia/eslint-merge/merge-with'
+import getMapMerge from '@sequencemedia/eslint-merge/get-map-merge'
 
 import eslintConfig from './index.mjs'
 
 export default function mergeESLintConfigWith (config) {
   return (
     eslintConfig
-      .map(mergeWith(config))
+      .map(getMapMerge(config))
   )
 }
