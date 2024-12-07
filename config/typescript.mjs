@@ -9,14 +9,14 @@ import i from 'eslint-plugin-import'
 
 export default {
   name: '@sequencemedia/eslint-config-typescript/typescript',
-  linterOptions: {
-    reportUnusedDisableDirectives: 'error'
-  },
   languageOptions: {
     parser,
     parserOptions: {
       projectService: true
     }
+  },
+  linterOptions: {
+    reportUnusedDisableDirectives: 'error'
   },
   plugins: {
     '@typescript-eslint': t,
