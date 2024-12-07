@@ -1,8 +1,8 @@
 import {
   parser
 } from 'typescript-eslint'
-import recommended from '#eslint-config-typescript/configs/recommended'
-import typescript from '#eslint-config-typescript/configs/typescript'
+import recommended from './configs/recommended.mjs'
+import typescript from './configs/typescript.mjs'
 
 export const configs = {
   recommended,

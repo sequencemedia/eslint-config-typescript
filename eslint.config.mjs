@@ -1,5 +1,7 @@
 import globals from 'globals'
-import { configs } from '@sequencemedia/eslint-config-standard'
+import {
+  configs
+} from '@sequencemedia/eslint-config-standard'
 
 export default [
   {
