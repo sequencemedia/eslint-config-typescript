@@ -60,7 +60,7 @@
     "typescript-eslint": "^8.17.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.1.7",
+    "@sequencemedia/eslint-config-standard": "^0.2.0",
     "chai": "^5.1.2",
     "eslint": "^9.16.0",
     "husky": "^9.1.7",
@@ -72,16 +72,15 @@
   "imports": {
     "#eslint-config-typescript": "./index.mjs",
     "#eslint-config-typescript/common": "./common/index.mjs",
-    "#eslint-config-typescript/config": "./config/index.mjs",
-    "#eslint-config-typescript/config/*": "./config/*.mjs",
+    "#eslint-config-typescript/configs": "./configs/index.mjs",
+    "#eslint-config-typescript/configs/*": "./configs/*.mjs",
     "#eslint-config-typescript/merge": "./merge.mjs",
     "#eslint-config-typescript/merge/*": "./merge/*.mjs"
   },
   "exports": {
     ".": "./index.mjs",
-    "./common": "./common/index.mjs",
-    "./config": "./config/index.mjs",
-    "./config/*": "./config/*.mjs",
+    "./configs": "./configs/index.mjs",
+    "./configs/*": "./configs/*.mjs",
     "./merge": "./merge.mjs",
     "./merge/*": "./merge/*.mjs"
   }

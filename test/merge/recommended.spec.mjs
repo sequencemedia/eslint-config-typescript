@@ -2,11 +2,11 @@ import {
   expect
 } from 'chai'
 
-import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/configs/typescript'
+import RECOMMENDED from '@sequencemedia/eslint-config-typescript/configs/recommended'
 
-import merge from '@sequencemedia/eslint-config-typescript/merge/typescript'
+import merge from '@sequencemedia/eslint-config-typescript/merge/recommended'
 
-describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
+describe('@sequencemedia/eslint-config-typescript/merge/recommended', () => {
   describe('`merge`', () => it('is a function', () => expect(merge).to.be.a('function')))
 
   describe('`merge()`', () => {
@@ -34,8 +34,10 @@ describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
         }
 
         const {
-          rules: TYPESCRIPT_RULES
-        } = TYPESCRIPT
+          languageOptions: RECOMMENDED_LANGUAGE_OPTIONS,
+          linterOptions: RECOMMENDED_LINTER_OPTIONS,
+          rules: RECOMMENDED_RULES
+        } = RECOMMENDED
 
         return (
           expect(
@@ -49,13 +51,19 @@ describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
             })
           )
             .to.eql({
-              ...TYPESCRIPT,
+              ...RECOMMENDED,
               files: MOCK_FILES,
               ignores: MOCK_IGNORES,
-              languageOptions: MOCK_LANGUAGE_OPTIONS,
-              linterOptions: MOCK_LINTER_OPTIONS,
+              languageOptions: {
+                ...RECOMMENDED_LANGUAGE_OPTIONS,
+                ...MOCK_LANGUAGE_OPTIONS
+              },
+              linterOptions: {
+                ...RECOMMENDED_LINTER_OPTIONS,
+                ...MOCK_LINTER_OPTIONS
+              },
               rules: {
-                ...TYPESCRIPT_RULES,
+                ...RECOMMENDED_RULES,
                 ...MOCK_RULES
               },
               settings: MOCK_SETTINGS

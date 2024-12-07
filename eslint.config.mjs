@@ -1,8 +1,9 @@
 import globals from 'globals'
-import merge from '@sequencemedia/eslint-config-standard/merge'
+import { configs } from '@sequencemedia/eslint-config-standard'
 
 export default [
-  ...merge({
+  {
+    ...configs.recommended,
     files: [
       '**/*.{mjs,cjs}'
     ],
@@ -14,8 +15,9 @@ export default [
         ...globals.node
       }
     }
-  }),
-  ...merge({
+  },
+  {
+    ...configs.recommended,
     files: [
       'test/**/*.{mjs,cjs}'
     ],
@@ -24,5 +26,5 @@ export default [
         ...globals.mocha
       }
     }
-  })
+  }
 ]

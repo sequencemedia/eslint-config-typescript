@@ -6,7 +6,7 @@ import {
   parser
 } from 'typescript-eslint'
 
-import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/config/typescript'
+import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/configs/typescript'
 
 import merge from '@sequencemedia/eslint-config-typescript/merge'
 
@@ -25,18 +25,21 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
           'MOCK IGNORES'
         ]
         const MOCK_LANGUAGE_OPTIONS = {
-          parser,
-          parserOptions: {
-            projectService: true
-          }
+          mockOption: 'MOCK LANGUAGE OPTIONS'
         }
         const MOCK_LINTER_OPTIONS = {
-          reportUnusedDisableDirectives: 'error'
+          mockOption: 'MOCK LINTER OPTIONS'
         }
-        const MOCK_RULES = { mockOption: 'MOCK RULES' }
-        const MOCK_SETTINGS = { mockOption: 'MOCK SETTINGS' }
+        const MOCK_RULES = {
+          mockOption: 'MOCK RULES'
+        }
+        const MOCK_SETTINGS = {
+          mockOption: 'MOCK SETTINGS'
+        }
 
         const {
+          languageOptions: TYPESCRIPT_LANGUAGE_OPTIONS,
+          linterOptions: TYPESCRIPT_LINTER_OPTIONS,
           rules: TYPESCRIPT_RULES
         } = TYPESCRIPT
 
@@ -54,28 +57,38 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
             .to.eql([
               {
                 name: '@sequencemedia/eslint-config-typescript',
-                files: MOCK_FILES,
-                ignores: MOCK_IGNORES,
                 languageOptions: {
-                  ecmaVersion: 'latest',
-                  ...MOCK_LANGUAGE_OPTIONS
+                  parser,
+                  parserOptions: {
+                    projectService: true
+                  }
                 },
-                linterOptions: MOCK_LINTER_OPTIONS,
-                rules: MOCK_RULES,
-                settings: MOCK_SETTINGS
+                linterOptions: {
+                  reportUnusedDisableDirectives: 'error'
+                },
+                files: [
+                  '**/*.{ts,mts,cts}'
+                ]
               },
               {
                 ...TYPESCRIPT,
                 files: MOCK_FILES,
                 ignores: MOCK_IGNORES,
-                languageOptions: MOCK_LANGUAGE_OPTIONS,
-                linterOptions: MOCK_LINTER_OPTIONS,
+                languageOptions: {
+                  ...TYPESCRIPT_LANGUAGE_OPTIONS,
+                  ...MOCK_LANGUAGE_OPTIONS
+                },
+                linterOptions: {
+                  ...TYPESCRIPT_LINTER_OPTIONS,
+                  ...MOCK_LINTER_OPTIONS
+                },
                 rules: {
                   ...TYPESCRIPT_RULES,
                   ...MOCK_RULES
                 },
                 settings: MOCK_SETTINGS
-              }])
+              }
+            ])
         )
       })
     })

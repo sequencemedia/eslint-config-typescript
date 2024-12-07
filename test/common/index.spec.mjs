@@ -5,9 +5,9 @@ import {
 import {
   isString,
   isObject
-} from '@sequencemedia/eslint-config-typescript/common'
+} from '#eslint-config-typescript/common'
 
-describe('@sequencemedia/eslint-config-typescript/common', () => {
+describe('#eslint-config-typescript/common', () => {
   describe('`isString`', () => it('is a function', () => expect(isString).to.be.a('function')))
 
   describe('`isObject`', () => it('is a function', () => expect(isObject).to.be.a('function')))
