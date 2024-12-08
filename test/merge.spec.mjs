@@ -60,7 +60,8 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
                 languageOptions: {
                   parser,
                   parserOptions: {
-                    projectService: true
+                    projectService: true,
+                    project: 'tsconfig.json'
                   }
                 },
                 linterOptions: {

@@ -13,6 +13,7 @@ export default [
       'test'
     ],
     languageOptions: {
+      ...configs.recommended.languageOptions,
       globals: {
         ...globals.node
       }
@@ -24,6 +25,7 @@ export default [
       'test/**/*.{mjs,cjs}'
     ],
     languageOptions: {
+      ...configs.recommended.languageOptions,
       globals: {
         ...globals.mocha
       }

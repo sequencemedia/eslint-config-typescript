@@ -15,7 +15,8 @@ export default [
     languageOptions: {
       parser,
       parserOptions: {
-        projectService: true
+        projectService: true,
+        project: 'tsconfig.json'
       }
     },
     linterOptions: {
