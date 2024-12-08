@@ -1,6 +1,4 @@
-import {
-  parser
-} from 'typescript-eslint'
+import parser from '@typescript-eslint/parser'
 import recommended from './configs/recommended.mjs'
 import typescript from './configs/typescript.mjs'
 

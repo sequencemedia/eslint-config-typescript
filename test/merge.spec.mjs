@@ -2,9 +2,7 @@ import {
   expect
 } from 'chai'
 
-import {
-  parser
-} from 'typescript-eslint'
+import parser from '@typescript-eslint/parser'
 
 import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/configs/typescript'
 

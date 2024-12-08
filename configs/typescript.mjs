@@ -1,6 +1,4 @@
-import {
-  plugin as t
-} from 'typescript-eslint'
+import t from '@typescript-eslint/eslint-plugin'
 import c from 'eslint-plugin-eslint-comments'
 import n from 'eslint-plugin-n'
 import p from 'eslint-plugin-promise'
