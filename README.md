@@ -31,16 +31,18 @@ export default [
 You can merge _changes_ in the default configuration using the `merge` utility:
 
 ```javascript
-import merge from '@sequencemedia/eslint-config-typescript/merge'
+import merge from '@sequencemedia/eslint-config-typescript/configs/recommended/merge'
 
-export default merge({
-  files: [
-    '**/*.{mjs,cjs}'
-  ],
-  ignores: [
-    'lib'
-  ]
-})
+export default (
+  merge({
+    files: [
+      '**/*.{mjs,cjs}'
+    ],
+    ignores: [
+      'lib'
+    ]
+  })
+)
 ```
 
 Which is _equivalent to_:
