@@ -32,3 +32,10 @@ babel.config.*
 
 # ESLint
 eslint.config.*
+
+# Mocha
+test
+
+# Dev
+examples
+coverage
