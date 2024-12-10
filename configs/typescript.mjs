@@ -403,7 +403,6 @@ export default {
       }
     ],
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
-
     /**
      * `eslint-plugin-eslint-comments`
      */
@@ -426,7 +425,6 @@ export default {
         ]
       }
     ],
-
     /**
      * `eslint-plugin-n`
      */
@@ -440,12 +438,10 @@ export default {
     'n/no-new-require': 'error',
     'n/no-path-concat': 'error',
     'n/process-exit-as-throw': 'error',
-
     /**
      * `eslint-plugin-promise`
      */
     'promise/param-names': 'error',
-
     /**
      * `eslint-plugin-import`
      */

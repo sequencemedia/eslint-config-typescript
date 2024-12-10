@@ -2,7 +2,7 @@
 
 TypeScript style Flat Config for ESLint `v9`
 
-Based on [Love](https://github.com/mightyiam/eslint-config-love)
+Based on [Standard with TypeScript](https://github.com/mightyiam/eslint-config-standard-with-typescript) via [Love](https://github.com/mightyiam/eslint-config-love)
 
 ## Install
 
