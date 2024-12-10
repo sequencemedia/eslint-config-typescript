@@ -2,11 +2,11 @@ import {
   expect
 } from 'chai'
 
-import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/configs/typescript'
+import RECOMMENDED from '@sequencemedia/eslint-config-typescript/configs/recommended'
 
-import merge from '@sequencemedia/eslint-config-typescript/merge/typescript'
+import merge from '@sequencemedia/eslint-config-typescript/configs/recommended/merge'
 
-describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
+describe('@sequencemedia/eslint-config-typescript/configs/recommended/merge', () => {
   describe('`merge`', () => it('is a function', () => expect(merge).to.be.a('function')))
 
   describe('`merge()`', () => {
@@ -24,7 +24,10 @@ describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
           mockOption: 'MOCK LANGUAGE OPTIONS'
         }
         const MOCK_LINTER_OPTIONS = {
-          mockOptions: 'MOCK LINTER OPTIONS'
+          mockOption: 'MOCK LINTER OPTIONS'
+        }
+        const MOCK_PLUGINS = {
+          mockOption: 'MOCK PLUGINS'
         }
         const MOCK_RULES = {
           mockOption: 'MOCK RULES'
@@ -34,8 +37,12 @@ describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
         }
 
         const {
-          rules: TYPESCRIPT_RULES
-        } = TYPESCRIPT
+          languageOptions: RECOMMENDED_LANGUAGE_OPTIONS,
+          linterOptions: RECOMMENDED_LINTER_OPTIONS,
+          plugins: RECOMMENDED_PLUGINS,
+          rules: RECOMMENDED_RULES,
+          settings: RECOMMENDED_SETTINGS
+        } = RECOMMENDED
 
         return (
           expect(
@@ -44,21 +51,35 @@ describe('@sequencemedia/eslint-config-typescript/merge/typescript', () => {
               ignores: MOCK_IGNORES,
               languageOptions: MOCK_LANGUAGE_OPTIONS,
               linterOptions: MOCK_LINTER_OPTIONS,
+              plugins: MOCK_PLUGINS,
               rules: MOCK_RULES,
               settings: MOCK_SETTINGS
             })
           )
             .to.eql({
-              ...TYPESCRIPT,
+              ...RECOMMENDED,
               files: MOCK_FILES,
               ignores: MOCK_IGNORES,
-              languageOptions: MOCK_LANGUAGE_OPTIONS,
-              linterOptions: MOCK_LINTER_OPTIONS,
+              languageOptions: {
+                ...RECOMMENDED_LANGUAGE_OPTIONS,
+                ...MOCK_LANGUAGE_OPTIONS
+              },
+              linterOptions: {
+                ...RECOMMENDED_LINTER_OPTIONS,
+                ...MOCK_LINTER_OPTIONS
+              },
+              plugins: {
+                ...RECOMMENDED_PLUGINS,
+                ...MOCK_PLUGINS
+              },
               rules: {
-                ...TYPESCRIPT_RULES,
+                ...RECOMMENDED_RULES,
                 ...MOCK_RULES
               },
-              settings: MOCK_SETTINGS
+              settings: {
+                ...RECOMMENDED_SETTINGS,
+                ...MOCK_SETTINGS
+              }
             })
         )
       })

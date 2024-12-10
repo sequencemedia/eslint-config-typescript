@@ -2,9 +2,7 @@ import {
   expect
 } from 'chai'
 
-import parser from '@typescript-eslint/parser'
-
-import TYPESCRIPT from '@sequencemedia/eslint-config-typescript/configs/typescript'
+import eslintConfig from '@sequencemedia/eslint-config-typescript'
 
 import merge from '@sequencemedia/eslint-config-typescript/merge'
 
@@ -15,6 +13,11 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
     describe('Always', () => it('returns an array', () => expect(merge()).to.be.an('array')))
 
     describe('Merges', () => {
+      const [
+        DEFAULT,
+        TYPESCRIPT
+      ] = eslintConfig
+
       it('returns an array', () => {
         const MOCK_FILES = [
           'MOCK FILES'
@@ -28,6 +31,9 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
         const MOCK_LINTER_OPTIONS = {
           mockOption: 'MOCK LINTER OPTIONS'
         }
+        const MOCK_PLUGINS = {
+          mockOption: 'MOCK PLUGINS'
+        }
         const MOCK_RULES = {
           mockOption: 'MOCK RULES'
         }
@@ -38,7 +44,9 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
         const {
           languageOptions: TYPESCRIPT_LANGUAGE_OPTIONS,
           linterOptions: TYPESCRIPT_LINTER_OPTIONS,
-          rules: TYPESCRIPT_RULES
+          plugins: TYPESCRIPT_PLUGINS,
+          rules: TYPESCRIPT_RULES,
+          settings: TYPESCRIPT_SETTINGS
         } = TYPESCRIPT
 
         return (
@@ -48,27 +56,13 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
               ignores: MOCK_IGNORES,
               languageOptions: MOCK_LANGUAGE_OPTIONS,
               linterOptions: MOCK_LINTER_OPTIONS,
+              plugins: MOCK_PLUGINS,
               rules: MOCK_RULES,
               settings: MOCK_SETTINGS
             })
           )
             .to.eql([
-              {
-                name: '@sequencemedia/eslint-config-typescript',
-                languageOptions: {
-                  parser,
-                  parserOptions: {
-                    projectService: true,
-                    project: 'tsconfig.json'
-                  }
-                },
-                linterOptions: {
-                  reportUnusedDisableDirectives: 'error'
-                },
-                files: [
-                  '**/*.{ts,mts,cts}'
-                ]
-              },
+              DEFAULT,
               {
                 ...TYPESCRIPT,
                 files: MOCK_FILES,
@@ -81,11 +75,18 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
                   ...TYPESCRIPT_LINTER_OPTIONS,
                   ...MOCK_LINTER_OPTIONS
                 },
+                plugins: {
+                  ...TYPESCRIPT_PLUGINS,
+                  ...MOCK_PLUGINS
+                },
                 rules: {
                   ...TYPESCRIPT_RULES,
                   ...MOCK_RULES
                 },
-                settings: MOCK_SETTINGS
+                settings: {
+                  ...TYPESCRIPT_SETTINGS,
+                  ...MOCK_SETTINGS
+                }
               }
             ])
         )
