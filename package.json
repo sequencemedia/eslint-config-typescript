@@ -52,13 +52,13 @@
   },
   "dependencies": {
     "@sequencemedia/eslint-merge": "^0.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^17.15.0",
+    "eslint-plugin-n": "^17.15.1",
     "eslint-plugin-promise": "^7.2.1",
-    "globals": "^15.13.0"
+    "globals": "^15.14.0"
   },
   "devDependencies": {
     "@sequencemedia/eslint-config-standard": "^0.2.8",
