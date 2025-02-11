@@ -51,9 +51,9 @@
     "test": "mocha test --recursive --verbose --color"
   },
   "dependencies": {
-    "@sequencemedia/eslint-merge": "^0.0.8",
-    "@typescript-eslint/eslint-plugin": "^8.23.0",
-    "@typescript-eslint/parser": "^8.23.0",
+    "@sequencemedia/eslint-merge": "^0.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.15.1",
@@ -61,7 +61,7 @@
     "globals": "^15.14.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.18",
+    "@sequencemedia/eslint-config-standard": "^0.2.19",
     "chai": "^5.1.2",
     "eslint": "^9.20.0",
     "husky": "^9.1.7",
