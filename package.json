@@ -58,10 +58,10 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-n": "^17.15.1",
     "eslint-plugin-promise": "^7.2.1",
-    "globals": "^15.14.0"
+    "globals": "^15.15.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.20",
+    "@sequencemedia/eslint-config-standard": "^0.2.21",
     "chai": "^5.1.2",
     "eslint": "^9.20.1",
     "husky": "^9.1.7",
