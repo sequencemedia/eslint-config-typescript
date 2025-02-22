@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "@sequencemedia/eslint-merge": "^0.0.10",
+    "@stylistic/eslint-plugin-ts": "^4.0.1",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",
     "eslint-plugin-eslint-comments": "^3.2.0",

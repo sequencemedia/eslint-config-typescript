@@ -12,9 +12,12 @@ export default {
     n,
     promise: p,
     import: i
-
   },
   rules: {
+    /**
+     *  `@stylistic/eslint-plugin-ts`
+     */
+    '@stylistic/ts/comma-dangle': ['error', 'never'],
     /**
      *  `@typescript-eslint`
      */
