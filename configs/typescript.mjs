@@ -15,10 +15,6 @@ export default {
   },
   rules: {
     /**
-     *  `@stylistic/eslint-plugin-ts`
-     */
-    '@stylistic/ts/comma-dangle': ['error', 'never'],
-    /**
      *  `@typescript-eslint`
      */
     '@typescript-eslint/adjacent-overload-signatures': 'error',
