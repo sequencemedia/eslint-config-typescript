@@ -1,4 +1,5 @@
 import parser from '@typescript-eslint/parser'
+import stylistic from './stylistic.mjs'
 import typescript from './typescript.mjs'
 
 export default {
@@ -17,9 +18,11 @@ export default {
     '**/*.{ts,mts,cts}'
   ],
   plugins: {
+    ...stylistic.plugins,
     ...typescript.plugins
   },
   rules: {
+    ...stylistic.rules,
     ...typescript.rules
   }
 }

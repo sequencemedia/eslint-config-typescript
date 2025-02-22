@@ -12,6 +12,13 @@ export default {
     '@stylistic/ts/comma-dangle': [
       'error',
       'never'
+    ],
+    '@stylistic/ts/comma-spacing': [
+      'error',
+      {
+        before: false,
+        after: true
+      }
     ]
   }
 }
