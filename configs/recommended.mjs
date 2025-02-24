@@ -1,6 +1,6 @@
 import parser from '@typescript-eslint/parser'
-import stylistic from './stylistic.mjs'
 import typescript from './typescript.mjs'
+import stylistic from './stylistic.mjs'
 
 export default {
   name: '@sequencemedia/eslint-config-typescript/recommended',
@@ -18,11 +18,11 @@ export default {
     '**/*.{ts,mts,cts}'
   ],
   plugins: {
-    ...stylistic.plugins,
-    ...typescript.plugins
+    ...typescript.plugins,
+    ...stylistic.plugins
   },
   rules: {
-    ...stylistic.rules,
-    ...typescript.rules
+    ...typescript.rules,
+    ...stylistic.rules
   }
 }

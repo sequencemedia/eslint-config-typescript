@@ -1,15 +1,15 @@
 import recommended from './recommended.mjs'
-import stylistic from './stylistic.mjs'
 import typescript from './typescript.mjs'
+import stylistic from './stylistic.mjs'
 
 export {
   recommended,
-  stylistic,
-  typescript
+  typescript,
+  stylistic
 }
 
 export default {
   recommended,
-  stylistic,
-  typescript
+  typescript,
+  stylistic
 }

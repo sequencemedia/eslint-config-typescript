@@ -15,7 +15,6 @@ export default [
     languageOptions: {
       ...configs.recommended.languageOptions,
       globals: {
-        ...configs.recommended.languageOptions.globals,
         ...globals.node
       }
     }
@@ -28,7 +27,6 @@ export default [
     languageOptions: {
       ...configs.recommended.languageOptions,
       globals: {
-        ...configs.recommended.languageOptions.globals,
         ...globals.mocha
       }
     }

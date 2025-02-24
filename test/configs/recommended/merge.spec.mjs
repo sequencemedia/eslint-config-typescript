@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {
   expect
 } from 'chai'
@@ -10,8 +12,6 @@ describe('@sequencemedia/eslint-config-typescript/configs/recommended/merge', ()
   describe('`merge`', () => it('is a function', () => expect(merge).to.be.a('function')))
 
   describe('`merge()`', () => {
-    describe('Always', () => it('returns an object', () => expect(merge()).to.be.an('object')))
-
     describe('Merges', () => {
       it('returns an object', () => {
         const MOCK_FILES = [

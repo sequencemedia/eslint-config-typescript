@@ -1,12 +1,12 @@
 import parser from '@typescript-eslint/parser'
-import recommended from './configs/recommended.mjs'
-import stylistic from './configs/stylistic.mjs'
-import typescript from './configs/typescript.mjs'
+import recommended from '#eslint-config-typescript/configs/recommended'
+import typescript from '#eslint-config-typescript/configs/typescript'
+import stylistic from '#eslint-config-typescript/configs/stylistic'
 
 export const configs = {
   recommended,
-  stylistic,
-  typescript
+  typescript,
+  stylistic
 }
 
 export default [
@@ -26,6 +26,6 @@ export default [
       '**/*.{ts,mts,cts}'
     ]
   },
-  stylistic,
-  typescript
+  typescript,
+  stylistic
 ]

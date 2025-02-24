@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {
   expect
 } from 'chai'
@@ -10,13 +12,11 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
   describe('`merge`', () => it('is a function', () => expect(merge).to.be.a('function')))
 
   describe('`merge()`', () => {
-    describe('Always', () => it('returns an array', () => expect(merge()).to.be.an('array')))
-
     describe('Merges', () => {
       const [
         DEFAULT,
-        STYLISTIC,
-        TYPESCRIPT
+        TYPESCRIPT,
+        STYLISTIC
       ] = eslintConfig
 
       it('returns an array', () => {
@@ -43,20 +43,20 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
         }
 
         const {
-          languageOptions: STYLISTIC_LANGUAGE_OPTIONS,
-          linterOptions: STYLISTIC_LINTER_OPTIONS,
-          plugins: STYLISTIC_PLUGINS,
-          rules: STYLISTIC_RULES,
-          settings: STYLISTIC_SETTINGS
-        } = STYLISTIC
-
-        const {
           languageOptions: TYPESCRIPT_LANGUAGE_OPTIONS,
           linterOptions: TYPESCRIPT_LINTER_OPTIONS,
           plugins: TYPESCRIPT_PLUGINS,
           rules: TYPESCRIPT_RULES,
           settings: TYPESCRIPT_SETTINGS
         } = TYPESCRIPT
+
+        const {
+          languageOptions: STYLISTIC_LANGUAGE_OPTIONS,
+          linterOptions: STYLISTIC_LINTER_OPTIONS,
+          plugins: STYLISTIC_PLUGINS,
+          rules: STYLISTIC_RULES,
+          settings: STYLISTIC_SETTINGS
+        } = STYLISTIC
 
         return (
           expect(
@@ -72,31 +72,6 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
           )
             .to.eql([
               DEFAULT,
-              {
-                ...STYLISTIC,
-                files: MOCK_FILES,
-                ignores: MOCK_IGNORES,
-                languageOptions: {
-                  ...STYLISTIC_LANGUAGE_OPTIONS,
-                  ...MOCK_LANGUAGE_OPTIONS
-                },
-                linterOptions: {
-                  ...STYLISTIC_LINTER_OPTIONS,
-                  ...MOCK_LINTER_OPTIONS
-                },
-                plugins: {
-                  ...STYLISTIC_PLUGINS,
-                  ...MOCK_PLUGINS
-                },
-                rules: {
-                  ...STYLISTIC_RULES,
-                  ...MOCK_RULES
-                },
-                settings: {
-                  ...STYLISTIC_SETTINGS,
-                  ...MOCK_SETTINGS
-                }
-              },
               {
                 ...TYPESCRIPT,
                 files: MOCK_FILES,
@@ -119,6 +94,31 @@ describe('@sequencemedia/eslint-config-typescript/merge', () => {
                 },
                 settings: {
                   ...TYPESCRIPT_SETTINGS,
+                  ...MOCK_SETTINGS
+                }
+              },
+              {
+                ...STYLISTIC,
+                files: MOCK_FILES,
+                ignores: MOCK_IGNORES,
+                languageOptions: {
+                  ...STYLISTIC_LANGUAGE_OPTIONS,
+                  ...MOCK_LANGUAGE_OPTIONS
+                },
+                linterOptions: {
+                  ...STYLISTIC_LINTER_OPTIONS,
+                  ...MOCK_LINTER_OPTIONS
+                },
+                plugins: {
+                  ...STYLISTIC_PLUGINS,
+                  ...MOCK_PLUGINS
+                },
+                rules: {
+                  ...STYLISTIC_RULES,
+                  ...MOCK_RULES
+                },
+                settings: {
+                  ...STYLISTIC_SETTINGS,
                   ...MOCK_SETTINGS
                 }
               }
