@@ -51,25 +51,25 @@
     "test": "mocha test --recursive --verbose --color"
   },
   "dependencies": {
-    "@sequencemedia/eslint-merge": "^0.0.28",
-    "@stylistic/eslint-plugin-ts": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^8.32.1",
-    "@typescript-eslint/parser": "^8.32.1",
+    "@sequencemedia/eslint-merge": "^0.0.29",
+    "@stylistic/eslint-plugin-ts": "^4.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-n": "^17.18.0",
+    "eslint-plugin-n": "^17.19.0",
     "eslint-plugin-promise": "^7.2.1",
-    "globals": "^16.1.0"
+    "globals": "^16.2.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.61",
+    "@sequencemedia/eslint-config-standard": "^0.2.62",
     "@types/chai": "^5.2.2",
     "@types/eslint": "^9.6.1",
     "@types/mocha": "^10.0.10",
     "chai": "^5.2.0",
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "husky": "^9.1.7",
-    "mocha": "^11.4.0"
+    "mocha": "^11.5.0"
   },
   "peerDependencies": {
     "eslint": ">=9"
