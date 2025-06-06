@@ -1,4 +1,4 @@
-import stylistic from '@stylistic/eslint-plugin-ts'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default {
   name: '@sequencemedia/eslint-config-typescript/stylistic',
@@ -7,7 +7,7 @@ export default {
   },
   rules: {
     /**
-     *  `@stylistic/eslint-plugin-ts`
+     *  `@stylistic/eslint-plugin`
      */
     '@stylistic/ts/comma-dangle': [
       'error',
