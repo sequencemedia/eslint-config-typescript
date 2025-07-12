@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/eslint-config-typescript",
-  "version": "0.1.117",
+  "version": "0.1.118",
   "description": "TypeScript configuration for ESLint 9",
   "keywords": [
     "JavaScript TypeScript Style",
