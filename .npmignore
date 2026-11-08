@@ -26,7 +26,6 @@ node_modules
 
 # Hooks
 .husky/hooks
-husky.mjs
 
 # Babel
 babel.config.*
