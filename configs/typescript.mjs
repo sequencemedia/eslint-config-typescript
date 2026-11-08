@@ -1,8 +1,8 @@
 import t from '@typescript-eslint/eslint-plugin'
-import c from 'eslint-plugin-eslint-comments'
+import c from '@eslint-community/eslint-plugin-eslint-comments'
 import n from 'eslint-plugin-n'
 import p from 'eslint-plugin-promise'
-import i from 'eslint-plugin-import'
+import i from 'eslint-plugin-import-x'
 
 export default {
   name: '@sequencemedia/eslint-config-typescript/typescript',
@@ -403,7 +403,7 @@ export default {
     ],
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
     /**
-     * `eslint-plugin-eslint-comments`
+     * `@eslint-community/eslint-plugin-eslint-comments`
      */
     'eslint-comments/disable-enable-pair': [
       'error',
@@ -442,7 +442,7 @@ export default {
      */
     'promise/param-names': 'error',
     /**
-     * `eslint-plugin-import`
+     * `eslint-plugin-import-x`
      */
     'import/export': 'error',
     'import/first': 'error',
