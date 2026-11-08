@@ -1,8 +1,13 @@
 # `@sequencemedia/eslint-config-typescript`
 
-TypeScript style Flat Config for ESLint `v9`
+TypeScript style Flat Config for ESLint `v9` and `v10`
 
 Based on [Standard with TypeScript](https://github.com/mightyiam/eslint-config-standard-with-typescript) via [Love](https://github.com/mightyiam/eslint-config-love)
+
+## Requirements
+
+- ESLint `^9.38.0 || ^10.0.0`
+- Node.js `^20.19.0 || ^22.13.0 || >=24`
 
 ## Install
 
