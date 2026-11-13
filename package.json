@@ -66,7 +66,7 @@
     "globals": "^17.14.0"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.3.3",
+    "@sequencemedia/eslint-config-standard": "^0.3.4",
     "@types/chai": "^5.2.3",
     "@types/eslint": "^9.6.1",
     "@types/mocha": "^10.0.10",
